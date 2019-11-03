@@ -127,12 +127,12 @@
 
 <meta name="description" content="个人blog网站">
 <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
+<meta property="og:title" content="Categories">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;categories&#x2F;index.html">
 <meta property="og:site_name" content="愤怒的小串">
 <meta property="og:description" content="个人blog网站">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-02T16:39:33.507Z">
+<meta property="og:updated_time" content="2019-11-03T08:36:23.556Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -169,7 +169,7 @@
 
 
 
-  <title>categories | 愤怒的小串</title>
+  <title>Categories | 愤怒的小串</title>
   
 
 
@@ -334,7 +334,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
+	<h1 class="post-title" itemprop="name headline">Categories</h1>
 
 
 
@@ -373,12 +373,8 @@
           
 
   
-    <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
+    <div id="gitalk-container">
     </div>
-
   
 
 
@@ -681,46 +677,26 @@
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitmint({
-            id: window.location.pathname, 
-            owner: 'angrychuan',
-            repo: 'gitalk-comment',
-            
-            lang: "zh-CN" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-            
-            oauth: {
-            
-            
-                client_secret: '8dcb16814c4a4b97c6a3585c2535a60a690ffc0f',
-            
-                client_id: 'f29e70af46a48ba88701'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
 
 
 
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+		var gitalk = new Gitalk({
+		  clientID: '',
+		  clientSecret: '',
+		  repo: 'gitalk-comment',
+		  owner: '',
+		  admin: [''], 
+		  id: location.pathname,
+		  distractionFreeMode: ''
+		})
+		gitalk.render('gitalk-container')           
+       </script>
 
 
   
